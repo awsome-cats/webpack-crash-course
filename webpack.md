@@ -379,3 +379,75 @@ npx webpack --mode production
 ## 16.ソースマップを生成しよう
 
 ## 17.eslint-loaderでjavascriptの静的解析をリアルタイムに実行しよう
+
+- npm 
+- npx eslint --init
+
+```js
+//initによって依存プラグインをインストールするよう言ってきたが
+// レクチャー通り進めるため個別にインストールした
+"eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+
+```
+
+webpack.config.js
+
+```js
+
+{
+    enforce: 'pre',
+    test: /\.jsx?$/,
+    exclude: /node_modules/,
+    loader: 'eslint-loader',
+},
+
+enforce: 'pre', // eslintのloderが最も早い
+```
+
+babel-eslintをインストール
+
+- babel前のjavascriptのチェックをするためのもの
+
+```js
+// eslintrc.json
+// parserの設定
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint"
+}
+
+
+```
+
+eslint をwebpackで実行するには
+
+```js
+
+//webpackでeslintを実行
+npx webpack
+// eslintで実行する
+npx slint ./src/index.js
+
+
+
+// 自動で修正
+
+
+```
+
+### jsフィイルにjsx構文を含めるのを許可したい
+
+- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+
+### documentを許可したい
+
+```js
+// eslintrc.json
+ "env": {
+        "browser": true
+    },
+
+```
