@@ -364,6 +364,16 @@ document.body.classList.add('haikei')
 
 ## 15.optimize-css-assets-webpack-pluginでスタイルシートを圧縮しよう
 
+- [optimize-css-assets-webpack-plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/)
+
+- ビルド時のcssの圧縮化
+
+```js
+// buildコマンド
+npx webpack --mode production
+
+```
+
 ## section5 落ち葉拾い編
 
 ## 16.ソースマップを生成しよう
