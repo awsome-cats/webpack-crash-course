@@ -47,9 +47,11 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "kind-of": "^6.0.3",
     "lodash": "^4.17.15",
     "minimist": "^1.2.5",
     "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react-dom": "^16.8.1",
+    "serialize-javascript": "^2.1.1"
   }
 }
